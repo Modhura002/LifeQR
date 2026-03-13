@@ -1,0 +1,21 @@
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: '/api', // This now points back to the same ngrok URL
+});
+
+// Add a request interceptor to attach the token to every request
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+export default api;
