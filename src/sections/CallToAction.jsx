@@ -29,7 +29,7 @@ const CallToAction = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="bg-white text-primary px-10 py-5 rounded-2xl text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
-                Generate My QR Now
+                Signup Now
                 <ArrowRight size={24} />
               </button>
               <button className="bg-primary/20 hover:bg-primary/30 text-white border border-white/30 px-10 py-5 rounded-2xl text-xl font-bold transition-all">
