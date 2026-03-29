@@ -33,7 +33,7 @@ const Hero = () => {
             
             <div className="mt-10 flex flex-col sm:flex-row gap-5">
               <a href="#generate-qr" className="primary-gradient text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-2xl shadow-primary/30 hover:shadow-primary/40 hover:-translate-y-1 transition-all text-center">
-                Create My Medical QR
+                Signup Now
               </a>
               <a href="#how-it-works" className="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl text-lg font-bold hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
                 <Activity size={20} className="text-primary" />

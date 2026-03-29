@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { Plus, QrCode, User, Heart, Settings, Download, ExternalLink, RefreshCw, MapPin, AlertTriangle } from 'lucide-react';
 import toast from 'react-hot-toast';
+import SelfTransportCard from '../components/SelfTransportCard';
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -85,6 +86,34 @@ const Dashboard = () => {
               <p className="text-slate-500 text-sm mt-1">{card.sub}</p>
             </div>
           ))}
+        </div>
+        
+        {/* Quick Emergency Tools */}
+        <div className="mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-1">
+              <SelfTransportCard />
+            </div>
+            <div className="lg:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-[40px] shadow-xl text-white flex flex-col justify-center border border-slate-700">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center">
+                    <AlertTriangle className="text-primary-light" size={24} />
+                  </div>
+                  <h3 className="text-2xl font-bold italic">Emergency <span className="text-primary-light">Preparedness</span></h3>
+               </div>
+               <p className="text-slate-400 leading-relaxed mb-6">
+                 Your LifeQR is your primary defense. Ensure your profile is absolute and your QR code is reachable. The tools below are for immediate, on-the-ground assistance.
+               </p>
+               <div className="flex gap-4">
+                  <div className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-widest text-slate-400">
+                    GPS Active
+                  </div>
+                  <div className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-widest text-slate-400">
+                    Cloud Linked
+                  </div>
+               </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

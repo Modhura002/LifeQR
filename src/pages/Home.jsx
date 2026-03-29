@@ -7,6 +7,7 @@ import ScanPreview from '../sections/ScanPreview';
 import Benefits from '../sections/Benefits';
 import Trust from '../sections/Trust';
 import CallToAction from '../sections/CallToAction';
+import EmergencyTools from '../sections/EmergencyTools';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <div id="features"><Features /></div>
       <div id="demo"><DemoProfile /></div>
       <ScanPreview />
+      <EmergencyTools />
       <Benefits />
       <Trust />
       <CallToAction />
