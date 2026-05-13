@@ -45,23 +45,7 @@ const DemoProfile = () => {
               When every second counts, your LifeQR profile provides paramedics with everything they need to treat you safely and effectively.
             </p>
 
-            {/* Demo Disclaimer */}
-            <div className="bg-red-50 border-2 border-red-200 p-8 rounded-[32px] mb-12 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4 opacity-10">
-                 <AlertCircle size={80} />
-              </div>
-              <div className="flex gap-4 relative z-10">
-                <div className="w-12 h-12 rounded-2xl bg-red-100 flex items-center justify-center text-red-600 shrink-0">
-                  <AlertCircle size={24} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-black text-slate-900 uppercase tracking-tight mb-2 italic">Important: Feature Showcase Only</h4>
-                  <p className="text-slate-600 leading-relaxed font-medium">
-                    This interactive preview illustrates what LifeQR offers. To create your own <strong>Legitimate Medical Profile</strong> and generate a functioning QR code with SMS alerts, please <span className="text-red-600 font-bold underline">Sign Up</span> or <span className="text-red-600 font-bold underline">Log In</span>.
-                  </p>
-                </div>
-              </div>
-            </div>
+
 
             <div className="space-y-6">
               <div className="glass-morphism p-8 rounded-[32px] border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] transition-all">

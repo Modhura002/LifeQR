@@ -1,10 +1,11 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const path = require('path');
 const connectDB = require('./config/db');
 
 // Load env vars
-dotenv.config();
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 // Connect to database
 connectDB();
@@ -22,6 +23,7 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/profile', require('./routes/userRoutes'));
 app.use('/api/qr', require('./routes/qrRoutes'));
 app.use('/api/emergency', require('./routes/emergencyRoutes'));
+app.use('/api/chat', require('./routes/chatRoutes'));
 
 // Basic health check route
 app.get('/', (req, res) => {

@@ -6,6 +6,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 // Layout Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 
 // Pages
 import Home from './pages/Home';
@@ -72,6 +73,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
 
+          <Chatbot />
           <Footer />
         </div>
       </Router>
