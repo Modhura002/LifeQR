@@ -47,33 +47,45 @@ To avoid unnecessary usage of credits and configuration duplication, the project
 - Team members **do NOT need separate MongoDB databases unless they want to test individually**.
 - The **JWT secret key will also be included in the shared `.env` file**.
 
-All developers simply need to **place the shared `.env` file inside the `server` folder**.
+All developers simply need to **place the shared `.env` file inside the root directory (`LifeQR/.env`)**.
 
 This ensures:
 
 - consistent testing environment
-- minimal Twilio credit usage
+- minimal Twilio & Groq API credit usage
 - easier debugging across team members
 
+### 2. Environment Setup
 
-### 2. Backend Setup
+Place the shared `.env` file in the **root directory** (`LifeQR/.env`). It should look like the following:
+
+```env
+# Server Configuration
+PORT=5000
+FRONTEND_URL=http://localhost:5173
+
+# Database
+MONGODB_URI=your_mongodb_connection_string
+
+# Authentication
+JWT_SECRET=your_jwt_secret
+
+# SMS Alerts (Twilio)
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_token
+TWILIO_PHONE_NUMBER=your_twilio_purchased_number
+
+# AI Chatbot (Groq)
+GROQ_API_KEY=your_groq_api_key
+```
+
+### 3. Backend Setup
 ```bash
 cd server
 npm install
 ```
-Place the shared  `.env` file in the `server` directory and it should look like the following
-```env
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-TWILIO_ACCOUNT_SID=your_twilio_sid
-TWILIO_AUTH_TOKEN=your_twilio_token
-TWILIO_PHONE_NUMBER=your_twilio_purchased_number
-FRONTEND_URL=http://localhost:5173
-```
-
  
-### 3. Frontend Setup
+### 4. Frontend Setup
 ```bash
 # Return to the root directory
 cd ..
